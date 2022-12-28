@@ -9,4 +9,4 @@ class Task(models.Model):
     date_expiration = models.DateField(blank=True, null=True)
 
     def __str__(self):
-        return self.title, self.date_expiration
+        return self.title
