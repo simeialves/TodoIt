@@ -1,0 +1,32 @@
+{% extends "application.html" %} {% block content %}
+<h1>TodoIt | <small>New Task</small></h1>
+<form action="" method="post">
+  {% csrf_token %}
+
+  <div class="form-group mb-3">
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" name="title" class="form-control" />
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="description" class="form-label">Description:</label>
+    <input type="text" name="description" class="form-control" />
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="category" class="form-label">Category:</label>
+    <input type="text" name="category" class="form-control" />
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="date_expiration" class="form-label">Data Expiration:</label>
+    <input type="date" name="date_expiration" class="form-control" />
+  </div>
+
+  <div class="form-group mb-3">
+    <button type="submit" class="btn btn-primary">Confirmar</button>
+    <a href="/" class="btn btn-secondary">Cancelar</a>
+  </div>
+</form>
+
+{% endblock content %}
